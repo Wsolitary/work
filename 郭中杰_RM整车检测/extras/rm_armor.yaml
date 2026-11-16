@@ -1,0 +1,18 @@
+# 1. 数据集根目录（使用绝对路径最稳妥，避免找不到文件）
+# 注意：Windows 下路径用正斜杠 / 或者双反斜杠 \\
+path: D:/RM/yolo/YOLO/RM2025-Car-Public-Dataset
+
+# 2. 训练集和验证集的图片文件夹路径（相对于上面的 path）
+train: images/train
+val: images/val
+
+# （可选）测试集路径，如果没有可以注释掉
+# test: images/test
+
+# 3. 类别名称映射（最关键的配置！）
+# 这里的数字 0, 1, 2... 必须和你 labels 文件夹里 txt 文件的第一列数字严格对应。
+names:
+  0: armor    # 如果数据集标签全是 0，且不区分红蓝
+  # 如果数据集分红色和蓝色装甲板，通常是这样：
+  1: blue_armor
+  2: red_armor
